@@ -1,0 +1,30 @@
+client:
+    path:     /
+    defaults: { _controller: "IMIEBundle:Client:index" }
+
+client_show:
+    path:     /{id}/show
+    defaults: { _controller: "IMIEBundle:Client:show" }
+
+client_new:
+    path:     /new
+    defaults: { _controller: "IMIEBundle:Client:new" }
+
+client_create:
+    path:     /create
+    defaults: { _controller: "IMIEBundle:Client:create" }
+    methods:  POST
+
+client_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "IMIEBundle:Client:edit" }
+
+client_update:
+    path:     /{id}/update
+    defaults: { _controller: "IMIEBundle:Client:update" }
+    methods:  [POST, PUT]
+
+client_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "IMIEBundle:Client:delete" }
+    methods:  [POST, DELETE]

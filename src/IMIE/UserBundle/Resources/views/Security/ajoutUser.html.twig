@@ -1,0 +1,9 @@
+{%extends "::layout.html.twig"%}
+
+{% block body%}
+	 <form method="post" class="well m20 w60">
+		{{form_widget(form)}}
+		{{form_rest(form)}}
+		<a href="{{path('user')}}" class="btn btn-danger btn-lg"> Annuler </a>
+	 </form>
+{%endblock%}

@@ -1,0 +1,18 @@
+{%extends "::layout.html.twig"%}
+
+{%block body%}
+	<form class="well" method="POST">
+		{{form_widget(form)}}
+		{#&lt;div&gt;&lt;label class=&quot;required&quot;&gt;__name__label__&lt;/label&gt;&lt;div id=&quot;imie_imiebundle_produit_categories___name__&quot;&gt;&lt;div&gt;&lt;label for=&quot;imie_imiebundle_produit_categories___name___libelle&quot; class=&quot;required&quot;&gt;Libelle&lt;/label&gt;&lt;input type=&quot;text&quot; id=&quot;imie_imiebundle_produit_categories___name___libelle&quot; name=&quot;imie_imiebundle_produit[categories][__name__][libelle]&quot; required=&quot;required&quot; maxlength=&quot;100&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;#}
+		{#<div>
+			<label class="required">__name__label__</label>
+			<div id="imie_imiebundle_produit_categories___name__">
+				<div>
+					<label for="imie_imiebundle_produit_categories___name___libelle" class="required">Libelle</label>
+					<input type="text" id="imie_imiebundle_produit_categories___name___libelle" name="imie_imiebundle_produit[categories][__name__][libelle]" required="required"; maxlength="100" />
+				</div>
+			</div>
+		</div>#}	
+		<input type="submit" value="Valider" class="btn btn-primary btn-lg" />
+	</form>
+{%endblock%}

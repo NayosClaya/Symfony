@@ -1,0 +1,32 @@
+{%extends "::layout.html.twig" %}
+
+
+{% block body %}
+  <div class="container">
+    <h1>Liste des commandes</h1>
+    <table>
+      <tr>
+        <th class='w10 center'>Numéro</th>
+        <th class='w10 center'>Date</th>
+        <th class='w20 center'>Client</th>
+        <th class='w30 center'>Adresse</th>
+        <th class='w10 center'>Montant</th>
+        <th class='w20 center'>Action</th>
+      </tr>
+      {% for commandes in commande %}
+        <tr>
+          <td class='left'>{{commande.numeroCommande|default('')}}</td>
+          <td class='center'>{{commande.dateCommande|date('d/m/Y')}}</td>
+          <td class='left'>{{commande.nom|default('')}}</td>
+          <td class='left'>{{commande.adresse|default('')}}</td>
+          <td class='w10 center'>{{commande.montant|number_format(2,'.',' ')}}</td>
+          <td class='w20 center'>
+            <a href="{{path('imie_ajout_list_commande',{commande_id:'commande.id'})}}" class="btn btn-xs btn-primary w30">Ajout</a>
+            <a href="#" class="btn btn-xs btn-primary w30">Supprimer</a>
+            <a href="#" class="btn btn-xs btn-primary w30">Afficher</a>
+          </td>
+        </tr>
+      {%endfor%}
+    </table>
+  </div>
+{% endblock %}

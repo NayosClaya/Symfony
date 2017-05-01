@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+		   <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}" type="text/css" />
+		   <link rel="stylesheet" href="{{asset('css/layout.css')}}" type="text/css" />
+		{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+		<header class="container-fluid navy h50">
+			<div class="row">
+				<div class="col-md-2"><img src="{{asset('img/imie.png')}}" width="75%" /></div>
+				<div class="col-md-4 col-md-offset-6 border right">
+					<span class="glyphicon glyphicon-home main"><a href="#" class="blanc">Accueil</a> </span>
+					<span class="glyphicon glyphicon-envelope main">Contact </span>
+					<span class="glyphicon glyphicon-user main">Identification </span>
+					
+				</div>
+			</div>
+		</header>
+		<div class="container-fluid h550">
+			<nav class="col-md-4 h550 border radius">
+				<a class="btn btn-primary w99" href="{{path('imie_homepage',{'name':'Anthony'})}}">Hello</a>
+				<a class="btn btn-primary w99" href="{{path('imie_tableau')}}">Tableau</a>
+				<a class="btn btn-primary w99" href="{{path('article')}}">Liste Article</a>
+			</nav>
+			<article class="col-md-8   h550 ">
+					{% block body %}{% endblock %}		
+			</article>
+		</div>
+		<footer class="container-fluid  navy h50">
+			<div class="row">
+				<div class="col-md-4 ">
+						<iframe src="https://www.google.com/maps/d/embed?mid=1hEdG6weB-gEfc2NYFRDCXuE_484&hl=en_US" width="320" height="240"></iframe>				
+				
+				</div>
+				<div class="col-md-4 h240 ">
+						<h3>Qu'est-ce que le Lorem Ipsum?</h3>
+						<p>
+							Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+
+						</p>						
+				
+				</div>
+				<div class="col-md-4 h240 ">
+						<h3>Qu'est-ce que le Lorem Ipsum?</h3>
+						<p>
+							Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+
+						</p>						
+				</div>
+			</div>
+		</footer>
+       
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

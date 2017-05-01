@@ -1,0 +1,60 @@
+imie_lignecommande:
+    resource: "@IMIEBundle/Resources/config/routing/lignecommande.yml"
+    prefix:   /lignecommande
+
+imie_commande:
+    resource: "@IMIEBundle/Resources/config/routing/commande.yml"
+    prefix:   /commande
+
+imie_image:
+    resource: "@IMIEBundle/Resources/config/routing/image.yml"
+    prefix:   /image
+
+imie_client:
+    resource: "@IMIEBundle/Resources/config/routing/client.yml"
+    prefix:   /client
+
+imie_categorie:
+    resource: "@IMIEBundle/Resources/config/routing/categorie.yml"
+    prefix:   /categorie
+
+imie_article:
+    resource: "@IMIEBundle/Resources/config/routing/article.yml"
+    prefix:   /article
+
+imie_homepage:
+    path:     /
+    defaults: { _controller: IMIEBundle:Default:index}
+imie_tableau:
+    path:     /tableau
+    defaults: { _controller: IMIEBundle:Default:tableau}
+imie_ajout_article:
+    path:     /ajoutproduit/{id}
+    defaults: { _controller: IMIEBundle:Default:ajoutProduit, id:0}
+# ---------------------------Article-------------------------------
+imie_ajout_article:
+    path:     /ajoutart
+    defaults: { _controller: IMIEBundle:Default:ajoutart}
+imie_list_article:
+    path:     /listart
+    defaults: { _controller: IMIEBundle:Default:listart}
+imie_ajout_modif_article:
+    path:     /ajoutmodif/{id}
+    defaults: { _controller: IMIEBundle:Default:ajoutmodif, id:0}
+imie_supp_article:
+    path:     /suppart/{id}
+    defaults: { _controller: IMIEBundle:Default:suppArt, id:0}
+# -------------------PhotoIdentié et Fournisseur----
+imie_ajout_photo_identite:
+    path:     /ajoutphoto/{id}
+    defaults: { _controller: IMIEBundle:Default:ajoutphoto, id:0}
+imie_ajout_fournisseur:
+    path:     /ajoutfrs/{id}
+    defaults: { _controller: IMIEBundle:Default:ajoutfournisseur, id:0}
+# -----------------------
+imie_list_commande:
+    path:     /listcde
+    defaults: { _controller: IMIEBundle:Default:listCommande}
+imie_ajout_ligne_commande:
+    path:     /ajoutligne/{commande_id}
+    defaults: { _controller: IMIEBundle:Default:ajoutLigneCommande}

@@ -1,0 +1,37 @@
+commande:
+    path:     /
+    defaults: { _controller: "IMIEBundle:Commande:index" }
+
+commande_show:
+    path:     /{id}/show
+    defaults: { _controller: "IMIEBundle:Commande:show" }
+
+commande_new:
+    path:     /new
+    defaults: { _controller: "IMIEBundle:Commande:new" }
+
+commande_create:
+    path:     /create
+    defaults: { _controller: "IMIEBundle:Commande:create" }
+    methods:  POST
+
+commande_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "IMIEBundle:Commande:edit" }
+
+commande_update:
+    path:     /{id}/update
+    defaults: { _controller: "IMIEBundle:Commande:update" }
+    methods:  [POST, PUT]
+
+commande_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "IMIEBundle:Commande:delete" }
+    methods:  [POST, DELETE]
+
+commande_ajout_ligne_commande:
+    path:     /{id}/lignecommande
+    defaults: { _controller: "IMIEBundle:Commande:lignecommande" }
+    methods:  [POST, DELETE]
+    
+    

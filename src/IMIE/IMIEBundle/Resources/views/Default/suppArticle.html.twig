@@ -1,0 +1,17 @@
+{%extends "::layout.html.twig"%}
+
+{% block body%}
+		{%if (article)%}
+			<form method="POST">
+				<input type="hidden" name="id" value={{id}} />
+				<div>{{"Code:"~article.code}}</div>
+				<div>{{"Designation:"~article.designation}}</div>
+				<div>{{"Prix unitaire:"~article.prixUnitaire}}</div>	
+				<a href="{{path('imie_list_article')}}" class="btn btn-danger btn-lg" >Annuler</a>
+				<input type="submit" value="Supprimer" class="btn btn-primary btn-lg" />
+			</form>			
+		{%else%}
+			{{message}}	
+			<a href="{{path('imie_list_article')}}" class="btn btn-danger btn-lg" >Liste Article</a>			
+		{%endif%}
+{%endblock%}

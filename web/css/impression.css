@@ -1,0 +1,105 @@
+table { 
+	width: 100%; 
+	color: #717375; 
+	font-family: helvetica; 
+	line-height: 7mm; 
+	border-collapse: collapse; 
+}
+
+
+hr {color:#0B0B61;}
+h2 { margin: 5px; padding: 0;font-family: helvetica; color:#183152;  }
+h3 { margin: 5px; padding: 0;font-family: helvetica; color:#183152;  }
+h4 { margin: 5px; padding: 0;font-family: helvetica; color:#183152;  }
+p { margin: 5px; }
+img{
+	vertical-align:top;
+}
+.adresse{
+	font-family: helvetica, serif;
+	color: navy;
+}
+.label{
+	font-family: helvetica, serif;
+	color: navy;
+	font-weight: bold;
+	font-size: 20px; ;
+}
+.valeur{
+	font-family: helvetica, serif;
+	color: navy;
+	font-size: 12px; ; 
+}
+
+.wrap{
+	word-wrap: break-word;	
+}
+.border0 th { 
+	border: 1px solid #000;  
+	color: white; 
+	background: #183152; 
+	padding: 5px; 
+	font-weight: normal; 
+	font-size: 12px; 
+	text-align: center;
+	word-wrap: break-word;	
+	vertical-align:middle;
+	}
+.border0 td{
+	border-left: 1px solid #CFD1D2; 
+	border-right: 1px solid #CFD1D2;
+	border-top:none;
+	border-bottom:none;	
+	padding: 3px 3px; 
+	font-size: 10px; 
+	vertical-align:middle;
+}
+
+.border th { 
+	border: 1px solid #000;  
+	color: white; 
+	background: #183152; 
+	padding: 5px; 
+	font-weight: normal; 
+	font-size: 12px; 
+	text-align: center; 
+	vertical-align:middle;
+}
+.border td { 
+	border: 1px solid #CFD1D2; 
+	padding: 5px 10px; 
+	vertical-align:middle;
+	font-size: 10px;
+}
+
+.no-border { 
+	border-right: 1px solid #CFD1D2; 
+	border-left: none; 
+	border-top: none; 
+	border-bottom: none;
+}
+.centre{
+	text-align:center;
+}
+.droite{
+	text-align:right;
+}
+.gauche{
+	text-align:left;
+}
+.space { padding-top: 250px; }
+
+.2p   { width: 2%; }   .4p  { width: 4%; } 
+.5p   { width: 5%; }   .7p  { width: 7%; } 
+.6p   { width: 6%; }   .8p  { width: 8%; } 
+.10p { width: 10%; }  .15p  { width: 15%; }
+.20p { width: 20%; }  .25p  { width: 25%; }  
+.30p { width: 30%; }  .35p  { width: 35%; }
+.40p { width: 40%; }  .45p  { width: 45%; }
+.50p { width: 50%; }  .55p  { width: 55%; }
+.60p { width: 60%; }  .65p  { width: 65%; }
+.70p { width: 70%; }  .75p  { width: 75%; }
+.80p { width: 80%; }  .85p  { width: 85%; }
+.90p { width: 90%; }  .95p  { width: 95%; }
+.99p { width: 99%; }  .100p { width: 100%;}
+

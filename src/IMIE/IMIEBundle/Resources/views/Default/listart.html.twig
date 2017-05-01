@@ -1,0 +1,29 @@
+{%extends "::layout.html.twig"%}
+
+{%block body%}
+
+	<a href="{{path('imie_ajout_modif_article',{'id':0})}}" class="btn btn-primary w20 m5">Ajouter</a>
+	<table class="w100">
+		<tr>
+			<th colspan=3 class="center" >LISTE ARTICLE</th>
+		</tr>
+			<tr>
+				<th class="w20 center">CODE</th>
+				<th class="w30 center">DESIGNATION</th>
+				<th class="w30 center">CATEGORIE</th>
+				<th class="w20 center">ACTION</th>
+			</tr>	
+	    {%for article in articles%}
+			<tr>
+				<td>{{article.code}}</td>
+				<td>{{article.designation}}</td>
+				<td>{{article.categorie.libelle|default('')}}</td>
+				<td class="center">
+					<a href="{{path('imie_ajout_modif_article',{'id':article.id})}}" class="btn btn-primary btn-xs w30 m5">Modif</a>
+					<a href="{{path('imie_supp_article',{'id':article.id})}}" class="btn btn-primary btn-xs w30 m5">Supp.</a>
+					<a href="#" class="btn btn-primary btn-xs w30 m5">Aff.</a>
+				</td>
+			</tr>
+		{%endfor%}
+	</table>
+{%endblock%}

@@ -1,0 +1,41 @@
+{%extends "::layout.html.twig"%}
+
+{%block body%}
+<div class="w60  m20 container">
+	<form method="post" class="form-horizontal well  h70">
+		<legend>Saisie article</legend>
+		<div class="row">
+			<div class="col-md-3">
+			{{form_label(form.code,'Code     :')}}
+			</div>
+			<div class="col-md-9">
+				{{form_widget(form.code,{'attr':{'class':'input-md form-control'}})}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">		
+				{{form_label(form.designation,'Designation:')}}
+			</div>
+			<div class="col-md-9">			
+				{{form_widget(form.designation,{'attr':{'class':'input-md form-control'}})}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">		
+				{{form_label(form.prixUnitaire,'Prix Unitaire:')}}
+			</div>
+			<div class="col-md-9">
+				{{form_widget(form.prixUnitaire,{'attr':{'class':'input-md form-control w20'}})}}
+			</div>
+		</div>
+		{{form_rest(form)}}
+		<br/>
+		<div class="row">
+			<div class="col-md-12">
+			<input type="submit" value="Cancel" class="btn btn-danger pull-left" />
+			<input type="submit" value="Valider" class="btn btn-primary pull-right" />
+			</div>
+		</div>
+	</form>
+</div>
+{%endblock%}

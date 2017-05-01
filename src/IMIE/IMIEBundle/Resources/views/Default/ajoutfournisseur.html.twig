@@ -1,0 +1,30 @@
+{%extends "::layout.html.twig"%}
+
+{%block body%}
+
+<div class="container m20 w60">
+	<form method="POST" class="well">
+		<legend>Saisie Fournisseur</legend>
+		<div class="row">
+			<div class="col-md-6">
+			{{form_widget(form)}}
+			{{form_rest(form)}}
+			</div>
+			<div class="col-md-6 center">	
+				{%if fournisseur%}
+					<img src="{{asset('photo/'~fournisseur.photoIdentite.url|default(''))}}" alt="{{fournisseur.photoIdentite.alt|default('aucune photo')}}"	width="40%"/>
+			    {%else%}
+				     <h1 class="m20 center w100" >Photo à mettre à jour</h1>
+				{%endif%}
+			</div>
+		</div>
+		<br/>
+		<div class="row" >
+			<div class="col-md-12">
+				<a href="{{path('imie_homepage')}}" class="btn btn-lg btn-danger pull-left">Annuler</a>
+				<input type="submit" value="Valider" class="btn btn-lg btn-primary pull-right" />
+			</div>
+		</div>	
+	</form>
+</div>
+{%endblock%}

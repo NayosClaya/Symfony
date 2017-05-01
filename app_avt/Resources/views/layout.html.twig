@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+		   <link rel="stylesheet" href="{{asset('Bootstrap/css/bootstrap.min.css')}}" type="text/css" />
+		   <link rel="stylesheet" href="{{asset('css/layout_01.css')}}" type="text/css" />
+		{% endblock %}
+    </head>
+    <body>
+		<header class="container-fluid">
+			<div class="row navy h70">
+				<div class="col-md-4"><img src="{{asset('img/imie.png')}}" alt="LOGO"  width="45%"/></div>
+				<div class="col-md-8  right m20">
+					<span class="glyphicon glyphicon-envelope main">Contact</span>
+				</div>
+			</div>
+		</header>
+		<div class="container-fluid">
+			<div class="row white h550 ">
+				<nav class="col-md-4 h550 border">
+					<a href="{{path('imie_homepage',{'name':'Anthony'})}}" class="btn btn-primary w100 m5">Hello</a>
+					<a href="{{path('imie_tableau')}}" class="btn btn-primary w100 m5">Tableau</a>
+					<a href="{{path('article')}}" class="btn btn-primary w100 m5">Liste Article CRUD</a>
+					<a href="{{path('imie_list_article')}}" class="btn btn-primary w100 m5">Liste Article</a>
+					{{render_esi(controller("IMIEBundle:Default:arrivage"))}}
+				</nav>
+				<article class="col-md-8 h550">
+						{% block body %}{% endblock %}		
+				</article>
+			</div>
+		</div>	
+		<footer class="container-fluid">
+			<div class="row h70 navy">
+				<div class="col-md-4">
+					<iframe class="m30" src="https://www.google.com/maps/d/embed?mid=1hEdG6weB-gEfc2NYFRDCXuE_484&hl=en_US" width="320" height="240"></iframe>				
+				</div>
+				<div class="col-md-4 h240 ">
+					<h2 >Pourquoi l'utiliser?</h2>
+					<p>
+					On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut, et une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont apparues avec le temps, parfois par accident, souvent intentionnellement (histoire d'y rajouter de petits clins d'oeil, voire des phrases embarassantes).
+					</p>
+				
+				</div>
+				<div class="col-md-4 h240">
+					<h2>Pourquoi l'utiliser?</h2>
+					<p>
+					On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut, et une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont apparues avec le temps, parfois par accident, souvent intentionnellement (histoire d'y rajouter de petits clins d'oeil, voire des phrases embarassantes).
+					</p>				
+				</div>
+			</div>
+		</footer>
+       
+        {% block javascripts %}
+			<script src="{{asset('JQuery/jQuery.js')}}" type="text/javascript" ></script>
+			<script src="{{asset('Bootstrap/js/bootstrap.min.js')}}" type="text/javascript" ></script>
+			
+		
+		{% endblock %}
+    </body>
+</html>

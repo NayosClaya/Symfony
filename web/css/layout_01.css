@@ -1,0 +1,58 @@
+.main{
+	
+	cursor: pointer;
+}
+.m5{margin : 5px auto;}
+.m20{margin : 20px auto;}
+.m30{margin : 30px auto;}
+.navy{
+	background: navy;
+	color: white;
+}
+.white{
+	background: white;
+	color: navy;
+	
+}
+.border{
+	border: 1px solid navy;
+}
+.radius{
+	border-radius: 5px;
+}
+.h550{
+	min-height: 550px;
+}
+.h240{
+	min-height: 240px;
+}
+.h70{
+	min-height: 70px;
+}
+.w100{width: 100%;}
+.w60{width: 60%;}
+.w30{width: 30%;}
+.w20{width: 20%;}
+.w05{width: 5%;}
+
+table{
+	border-collapse: collapse;
+	
+}
+td, tr, th{
+	border: 1px solid black;
+	padding: auto 5px;
+	
+}
+.left{
+	text-align: left;
+	
+}
+
+.right{
+	text-align: right;
+}
+.center{
+	
+	text-align: center;
+}

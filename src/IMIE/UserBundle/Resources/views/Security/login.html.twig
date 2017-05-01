@@ -1,0 +1,18 @@
+{%extends "::layout.html.twig"%}
+
+{% block body%}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6 col-md-push-4 border" style="margin: 50px auto;" >
+			<form action="{{path('login_check')}}" method="post">
+				<label for="username">Login</label>
+				<input type="text" id="username" name="_username" value="" ><br/> 
+				<label for="password">Mot de passe</label>
+				<input type="password" id="password" name="_password" value="" ><br/>
+				<input type="submit" value="Connexion"  class="btn btn-primary" ><br/>
+				<input type="hidden" name="_target_path" value="/" />	
+			</form>
+		</div>
+	</div>
+</div>
+{%endblock%}

@@ -1,0 +1,42 @@
+.border{
+	border: 1px solid navy;
+}
+.blanc{
+	
+	color: white;
+}
+.main{
+	cursor: pointer;
+	
+}
+.right{
+	text-align: right;
+	
+}
+.w99{
+	width: 99%;
+	margin: 10px auto;
+}
+.radius{
+	
+	border-radius: 5px;
+}
+.h550{
+  min-height: 550px;
+}
+.h50{
+	min-height: 50px;	
+	
+}
+.h240{
+	
+	height: 240px;
+}
+.h100{
+	height: 100px;	
+	
+}
+.navy{
+	background: navy;
+	color: white;
+}

@@ -1,0 +1,34 @@
+hierarchie:
+    path:     /
+    defaults: { _controller: "UserBundle:Hierarchie:index" }
+
+hierarchie_show:
+    path:     /{id}/show
+    defaults: { _controller: "UserBundle:Hierarchie:show" }
+
+hierarchie_new:
+    path:     /new
+    defaults: { _controller: "UserBundle:Hierarchie:new" }
+
+hierarchie_create:
+    path:     /create
+    defaults: { _controller: "UserBundle:Hierarchie:create" }
+    methods:  POST
+
+hierarchie_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "UserBundle:Hierarchie:edit" }
+
+hierarchie_update:
+    path:     /{id}/update
+    defaults: { _controller: "UserBundle:Hierarchie:update" }
+    methods:  [POST, PUT]
+
+hierarchie_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "UserBundle:Hierarchie:delete" }
+    methods:  [POST, DELETE]
+# -----------------------nos routes --------------------------
+hierarchie_ajout:
+    path:     /ajout/{id}
+    defaults: { _controller: UserBundle:Hierarchie:ajout, id:0 }

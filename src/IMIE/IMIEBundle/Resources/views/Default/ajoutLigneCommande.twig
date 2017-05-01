@@ -1,0 +1,17 @@
+{%extends "::layout.html.twig" %}
+
+
+{% block body %}
+  <div class="container">
+    Numero : {{commande.numeroCommande}}
+    CLient: {{commande.client.nom}}
+    Adresse : {{commande.client.adresse}}
+    <form method='post>'
+{{form_widget(form)}}
+<a href="{{path('imie_list_commande')}}" class="btn btn-lg btn-danger pull-left">Annuler</a>
+
+{{form_rest(rest)}}
+      {%endfor%}
+    </form>
+  </div>
+{% endblock %}

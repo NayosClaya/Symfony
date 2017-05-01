@@ -1,0 +1,24 @@
+header, footer{
+	width: 100%;
+	min-height: 100px;
+	background: navy;
+	color : white;
+	font-size: 1.5em;
+}
+nav{
+	width: 25%;
+	min-height: 550px;
+	border: 1px solid navy;
+	
+}
+article{
+	width: 65%;
+	min-height: 550px;
+	border: 1px solid navy;
+	float: right;
+	vertical-align: top;
+}
+nav, article{
+	display: inline-block;
+	
+}

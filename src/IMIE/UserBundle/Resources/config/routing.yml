@@ -1,0 +1,19 @@
+user_hierarchie:
+    resource: "@UserBundle/Resources/config/routing/hierarchie.yml"
+    prefix:   /hierarchie
+
+user_user:
+    resource: "@UserBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+user_login:
+    path:     /login
+    defaults: { _controller: UserBundle:Security:login }
+login_check:
+    pattern: /login_check
+logout:
+    pattern: /logout
+# ----------------------------------------------
+user_ajout:
+    path:     /ajoutuser/{id}
+    defaults: { _controller: UserBundle:Security:ajoutUser, id:0 }
